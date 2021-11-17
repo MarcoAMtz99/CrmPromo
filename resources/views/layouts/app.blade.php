@@ -145,7 +145,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Hospitales') }}</a>
                                 </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Pacientes') }}</a>
+                                    <a class="nav-link" href="{{ url('/paciente') }}">{{ __('Pacientes') }}</a>
                                 </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="{{ route('Agenda') }}">{{ __('Agenda') }}</a>

@@ -25,3 +25,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Agenda', 'AgendaController@index')->name('Agenda');
+
+Route::resource('/paciente','PacienteController');
