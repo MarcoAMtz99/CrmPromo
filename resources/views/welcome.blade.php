@@ -61,6 +61,9 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .bg-gradient {
+                background: linear-gradient(to bottom, black, red);
+            }
            /* .bg-dark {
                 background:#BD2323;
             }
@@ -71,7 +74,7 @@
            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="flex-center position-ref full-height bg-secondary">
+        <div class="flex-center position-ref full-height bg-gradient">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -91,9 +94,9 @@
                     <!-- Promomedics System -->
                     <!-- <img src="{{ asset('img/logo.png') }}" alt="" class="title m-b-md"> -->
                 </div>
-                <div class="title m-b-md">
+                <div class="container-fluid">
                   
-                    <img src="{{ asset('img/logo.png') }}" alt="" class="title m-b-md">
+                    <img src="{{ asset('img/logo.png') }}" alt="" class="col-12">
                 </div>
 
                 <div class="links">

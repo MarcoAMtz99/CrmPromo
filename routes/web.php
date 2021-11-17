@@ -23,7 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/Agenda', 'AgendaController@index')->name('Agenda');
 
-Route::resource('/paciente','PacienteController');
+Route::group(['middleware' => 'auth'], function () {
+    //VISTA DE LA AGENDA PRINCIPAL
+    Route::get('/Agenda', 'AgendaController@index')->name('Agenda');
+    //METODO RESOURCE PACIENTE
+	Route::resource('/paciente','PacienteController');
+});

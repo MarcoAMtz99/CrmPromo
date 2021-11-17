@@ -29,6 +29,17 @@
 
     
 </head>
+<style>
+    .bg-gradient {
+                background: linear-gradient(to bottom, black, red);
+            }
+    .bg-gradient-red {
+                background: linear-gradient(to right, red, white);
+            }
+     .full-height {
+                height: 100vh;
+            }
+</style>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -54,54 +65,34 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="#">
                                         {{ __('Escolaridad') }}
                                     </a>
-                                      <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                      <a class="dropdown-item" href="#">
                                         {{ __('Departamentos') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Puestos') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="#">
                                         {{ __('Areas') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Beneficios') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Convenios') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Medios de contacto') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="#">
                                         {{ __('Aseguradoras') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Redes Sociales') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Servicios') }}
                                     </a>
 
@@ -114,19 +105,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="#">
                                         {{ __('Modulos') }}
                                     </a>
-                                      <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                      <a class="dropdown-item" href="#">
                                         {{ __('Perfiles') }}
                                     </a>
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                     <a class="dropdown-item" href="#">
                                         {{ __('Usuarios') }}
                                     </a>
                                   
@@ -167,11 +152,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesion') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                 </li>
                             @endif
                         @else
@@ -198,7 +183,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 bg-gradient">
             @yield('content')
         </main>
     </div>

@@ -6,7 +6,10 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('PACIENTES') }}</div>
-                        <a href="{{ route('paciente.create') }}" class="btn btn-dark"> CREAR NUEVO PACIENTE</a>
+                        <a href="{{ route('paciente.create') }}" class="btn btn-dark">
+                          <i
+                            class="far fa-add"> CREAR NUEVO PACIENTE</i>
+                        </a>
                        <!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
                 <div class="card-body">
                     <!-- ALERTA PARA MOSTRAR QUE YA SE ELIMINO -->
@@ -21,7 +24,7 @@
                                         @endif
                       <div class="table-responsive">
 
-                        <table class="table table-striped table-light">
+                        <table class="table table-striped table-light bg-gradient-red" >
                               <thead>
                                 <tr>
                                   <th scope="col">#</th>
