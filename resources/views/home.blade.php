@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header ">{{ __('Bienvenido') }}</div>
                    <div class="col-12">
-                       <img src="{{ asset('img/logo.png') }}" alt="">
+                       <img src="{{ asset('img/logo.png') }}" alt="" class="col-12">
                    </div>
                        
                 <div class="card-body">
