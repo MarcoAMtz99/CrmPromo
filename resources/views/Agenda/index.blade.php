@@ -132,7 +132,7 @@
                       locale: 'es',
                       aspectRatio: 1.5,
                       headerToolbar: {
-                     start: 'title', // will normally be on the left. if RTL, will be on the right
+                     start: '', // will normally be on the left. if RTL, will be on the right
                       center: 'dayGridWeek,dayGridMonth,dayGridDay',
                       end: 'today prev,next' // will normally be on the right. if RTL, will be on the left     
                  },
