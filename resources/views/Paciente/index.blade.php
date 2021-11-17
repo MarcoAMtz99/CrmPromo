@@ -9,7 +9,7 @@
                         <a href="" class="btn btn-dark"> CREAR NUEVO PACIENTE</a>
                        <!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
                 <div class="card-body">
-                      
+                      <div class="table-responsive">
 
                         <table class="table table-striped table-light">
                               <thead>
@@ -41,7 +41,7 @@
                               </tbody>
                          </table>
 
-
+                          </div>
 
                 </div>
             </div>
