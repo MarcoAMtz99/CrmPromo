@@ -74,7 +74,7 @@
            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="flex-center position-ref full-height bg-gradient">
+        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -89,7 +89,7 @@
                 </div>
             @endif
 
-            <div class="content ">
+            <div class="content">
                 <div class="title m-b-md">
                     <!-- Promomedics System -->
                     <!-- <img src="{{ asset('img/logo.png') }}" alt="" class="title m-b-md"> -->

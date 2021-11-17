@@ -24,7 +24,7 @@
                                         @endif
                       <div class="table-responsive">
 
-                        <table class="table table-striped table-light bg-gradient-red" >
+                        <table class="table table-striped table-light" >
                               <thead>
                                 <tr>
                                   <th scope="col">#</th>
