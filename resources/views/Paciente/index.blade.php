@@ -6,9 +6,19 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('PACIENTES') }}</div>
-                        <a href="" class="btn btn-dark"> CREAR NUEVO PACIENTE</a>
+                        <a href="{{ route('paciente.create') }}" class="btn btn-dark"> CREAR NUEVO PACIENTE</a>
                        <!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
                 <div class="card-body">
+                    <!-- ALERTA PARA MOSTRAR QUE YA SE ELIMINO -->
+                                @if (session('error'))
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="p-3 mb-2 bg-danger text-white">
+                                                        {{session('error')}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
                       <div class="table-responsive">
 
                         <table class="table table-striped table-light">
@@ -32,16 +42,24 @@
                                    <td>{{$paciente->edad}}</td>
                                     <td>{{$paciente->telefono}}</td>
                                      <td>
-                                        <a href="#" class="btn btn-info">Editar</a>
-                                         <a href="#" class="btn btn-primary">ver</a>
-                                          <a href="#" class="btn btn-danger">Eliminar</a>
+                                    
+                                     <a href="{{ route('paciente.show',$paciente->id) }}" class="btn btn-primary">ver</a>
+                                         <form role="form" method="POST" action="{{ route('paciente.destroy',$paciente->id) }}">
+                                            @method('DELETE')
+                                              @csrf
+                                            <input type="hidden" name="_method" value="DELETE">
+                                        
+                                          <button type="submit" class="btn btn-danger" role="button" id="butonBorrar">
+                                               ELIMINAR
+                                             </button>
+                                          </form>
                                     </td>
                                 </tr>
                                 @endforeach
                               </tbody>
                          </table>
 
-                          </div>
+                        </div>
 
                 </div>
             </div>

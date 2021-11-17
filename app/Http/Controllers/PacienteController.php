@@ -28,6 +28,7 @@ class PacienteController extends Controller
     public function create()
     {
         //
+        return view('Paciente.create');
     }
 
     /**
@@ -39,6 +40,37 @@ class PacienteController extends Controller
     public function store(Request $request)
     {
         //
+        $paciente=new Paciente([
+                'nombre'=>$request->nombre,
+                'materno'=>$request->materno,
+                'paterno'=>$request->paterno,
+                'edad'=>$request->edad,
+                'nacimiento'=>$request->nacimiento,
+                'tutor'=>$request->tutor,
+                'tutor_nacimiento'=>$request->tutor_edad,
+                'tutor_edad'=>$request->tutor_edad,
+                'email'=>$request->email,
+                'telefono'=>$request->telefono,
+                'password'=>'secret',
+                'facebook'=>$request->facebook,
+                'sexo'=>$request->sexo,
+                'pais'=>$request->pais,
+                'estado'=>$request->estado,
+                'estado_civil'=>$request->estado_civil,
+                'hijos'=>$request->hijos,
+                'escolaridad'=>$request->escolaridad,
+                'ocupacion'=>$request->ocupacion,
+                'servicio_medico'=>$request->servicio_medico,
+                'gastos_medicos'=>$request->gastos_medicos,
+                'comentarios'=>$request->comentarios,
+                'recibe_informacion'=>$request->recibe_informacion,
+                'intereses'=>$request->intereses,
+                'status'=>1,
+
+
+            ]);
+        $paciente->save();
+        return redirect()->route('paciente.index')->with('error',"PACIENTE CREADO");;
     }
 
     /**
@@ -50,6 +82,9 @@ class PacienteController extends Controller
     public function show(Paciente $paciente)
     {
         //
+        // $pac = Paciente::where('id',$paciente->id)->get();
+        // dd($pac,$paciente);
+        return view('Paciente.show',['paciente'=> $paciente]);
     }
 
     /**
@@ -73,6 +108,11 @@ class PacienteController extends Controller
     public function update(Request $request, Paciente $paciente)
     {
         //
+        $temp = Paciente::find($paciente->id);
+        $temp->update($request->all());
+        return redirect()->route('paciente.index');
+        // return json_encode([$request->nombre,$paciente]);
+        // 
     }
 
     /**
@@ -83,6 +123,10 @@ class PacienteController extends Controller
      */
     public function destroy(Paciente $paciente)
     {
-        //
+      $pacientes = Paciente::all();
+       $paciente->delete();
+       // dd($pacientes);,['pacientes'=> $pacientes,
+       // 'msg'=>"PACIENTE ELIMINADO"]
+       return redirect()->back()->with('error',"PACIENTE ELIMINADO");
     }
 }
