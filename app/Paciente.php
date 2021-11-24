@@ -8,7 +8,9 @@ class Paciente extends Model
 {
     //
     public $timestamps = true;
+
      protected $fillable = [
+     	'id',
         'nombre',
 		'paterno',
 		'materno',

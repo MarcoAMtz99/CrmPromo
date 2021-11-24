@@ -121,7 +121,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Medicos') }}</a>
+                                    <a class="nav-link" href="{{ url('/medico') }}">{{ __('Medicos') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Grupo Medico') }}</a>

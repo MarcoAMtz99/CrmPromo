@@ -64,12 +64,12 @@
             .bg-gradient {
                 background: linear-gradient(to bottom, black, red);
             }
-           /* .bg-dark {
+            /*.bg-dark {
                 background:#BD2323;
-            }
-            .text-light{
-                background: white;
             }*/
+            .text-dark{
+                background: dark;
+            }
         </style>
            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
@@ -78,12 +78,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-light">Inicio</a>
+                        <a href="{{ url('/home') }}" class="text-dark">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-light">Iniciar sesion</a>
+                        <a href="{{ route('login') }}" class="text-dark">Iniciar sesion</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="text-light">Registrar</a>
+                            <a href="{{ route('register') }}" class="text-dark">Registrar</a>
                         @endif
                     @endauth
                 </div>

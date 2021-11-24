@@ -29,4 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Agenda', 'AgendaController@index')->name('Agenda');
     //METODO RESOURCE PACIENTE
 	Route::resource('/paciente','PacienteController');
+	//METODO RESOURCE MEDICO
+	Route::resource('/medico','MedicoController');
+	
 });
