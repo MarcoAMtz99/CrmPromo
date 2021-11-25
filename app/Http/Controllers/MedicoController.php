@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Medico;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 // use Carbon\Carbon;
 
 class MedicoController extends Controller
@@ -43,7 +44,13 @@ class MedicoController extends Controller
     public function store(Request $request)
     {
             $usuario = Auth::user();
-            // dd($request->all());
+            $archivo = $request->file('imagen')->store('public/profile/');
+            $archivo2 = $request->file('imagen');
+            $nombre =  time()."_".$archivo2->getClientOriginalName();
+            // $filename = date('Y-m-d-H:i:s')."-".$archivo2->getClientOriginalName();
+           
+             $url = Storage::url($archivo);
+             // dd($nombre,$url);
              $Medico = new Medico ( [ 
 
              'nombre'=>$request->nombre,
@@ -60,7 +67,7 @@ class MedicoController extends Controller
              'sexo'=>$request->sexo,
              'num_piso'=>$request->num_piso,
              'id_cp'=>$request->cp,
-             'fotografia'=>$request->fotografia,
+             'fotografia'=>$url,
              'num_cedula'=>$request->num_cedula,
              'tipoMedico'=>$request->tipoMedico,
              'giro'=>$request->giro,

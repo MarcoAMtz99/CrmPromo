@@ -27,12 +27,12 @@
 
                         <div class="table-responsive">
 
-                        <table class="table table-striped table-dark" >
+                        <table class="table table-striped table-light" >
                               <thead>
                                 <tr>
                                   <th scope="col">#</th>
                                   <th scope="col">Nombre</th>
-                                  <th scope="col">Cedula</th>
+                                  <th scope="col">Cedula</th >
                                   <th scope="col">Rfc</th>
                                   <th scope="col">Consultorio</th>
                                   <th scope="col">Status</th>
@@ -46,8 +46,16 @@
                                   <!-- <th scope="row">1</th> -->
                                   <td>{{$medico->id}}
                                      <div class="rounded-circle  rounded" width="45" height="45">
-                                            <img src="{{ asset('img/logo_small.png') }}"  width="55" height="55" class="rounded-circle " alt="..." >
-                                          </div>  
+
+                                         @if($medico->fotografia=='')
+                                             <img src="{{ asset('img/logo_small.png') }}"  width="55" height="55" class="rounded-circle " alt="..." >
+                                          </div> 
+                                        @else
+                                         <img src="{{asset($medico->fotografia) }}"  width="55" height="55" class="rounded-circle " alt="..." >
+                                        @endif     
+                                          </div> 
+
+
                                   </td>
                                   <td>{{$medico->nombre}} {{$medico->paterno}} {{$medico->materno}} </td>
                                   <td>{{$medico->rfc}}</td>

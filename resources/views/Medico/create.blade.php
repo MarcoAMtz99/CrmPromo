@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('CREAR NUEVO MEDICO') }}</div>
-                    <form role="form" name="Form" method="POST" action="{{ route('medico.store') }}" >
+                    <form role="form" name="Form" method="POST" action="{{ route('medico.store') }}"  enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                       <div class="row">
@@ -63,7 +63,9 @@
                           <input type="text" name="cp" class="form-control" placeholder="cp">
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="fotografia" class="form-control" placeholder="fotografia">
+                          <h4>Fotografia</h4>
+                          <input accept="image/*" type="file" name="imagen" >
+                          <!-- <input type="file" name="fotografia" class="form-control" placeholder="fotografia" accept="image/*"> -->
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
                           <input type="text" name="num_cedula" class="form-control" placeholder="Cedula">

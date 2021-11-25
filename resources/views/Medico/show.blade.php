@@ -162,8 +162,11 @@
           
                                                         </div>
                                                       <div class="col-xl-3 col-md-6 col-sm-10 p-2 m-3">
-                                                        <div class="card">
-                                                          <img src="{{ asset('img/logo_small.png') }}" class="card-img-top" alt="...">
+                                                        <div class="card " >
+                                                          <!-- <div class="rounded"> -->
+                                                              <img src="{{ asset($medico->fotografia) }}" class=" border border-dark rounded-circle m-3" alt="..." style="height: 25rem;">
+                                                          <!-- </div> -->
+                                                          
                                                           <div class="card-body">
                                                             <h5 class="card-title">FOTOGRAFIA</h5>
                                                             <p class="card-text"></p>
