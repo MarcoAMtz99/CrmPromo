@@ -44,7 +44,7 @@
                                 @if(isset($medico))
                                 <tr>
                                   <!-- <th scope="row">1</th> -->
-                                  <td>{{$medico->id}}
+                                  <td>
                                      <div class="rounded-circle  rounded" width="45" height="45">
 
                                          @if($medico->fotografia=='')
@@ -58,6 +58,7 @@
 
                                   </td>
                                   <td>{{$medico->nombre}} {{$medico->paterno}} {{$medico->materno}} </td>
+                                   <td>{{$medico->num_cedula}}</td>
                                   <td>{{$medico->rfc}}</td>
                                    <td>{{$medico->edad}}</td>
                                     <td>{{$medico->status}}</td>

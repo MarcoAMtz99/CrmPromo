@@ -124,7 +124,7 @@ class PacienteController extends Controller
      */
     public function destroy(Paciente $paciente)
     {
-      $pacientes = Paciente::all();
+      // $pacientes = Paciente::all();
        $paciente->delete();
        // dd($pacientes);,['pacientes'=> $pacientes,
        // 'msg'=>"PACIENTE ELIMINADO"]

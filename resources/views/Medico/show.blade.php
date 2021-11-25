@@ -206,17 +206,9 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="CONSULTORIOS-tab">
                               <P class="display-4">CONSULTORIOS</P>
                                 <div class="row">
-                                         <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3 ">
-                                          <input type="text" name="recibe_informacion" class="form-control" placeholder="Recibe Informacion" value=" ">
-                                        </div>
-                                         <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                                          <input type="text" name="intereses" class="form-control" placeholder="intereses" value=" ">
-                                        </div>
-                                         <div class="col-xl-5 col-md-6 col-sm-12  p-2 m-3 ">
-                                                       
-                                                            <button type="submit" class="btn btn-primary" disabled>GUARDAR</button>
-                                          </div>
-
+                                     <div class="col-xl-12 col-md-6 col-sm-12 p-2 m-3">
+                                      @include('Consultorio.index')
+                                      </div>
                                 </div>
                              </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

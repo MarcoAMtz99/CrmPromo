@@ -132,5 +132,10 @@ class MedicoController extends Controller
     public function destroy(Medico $medico)
     {
         //
+         // $medico = Paciente::all();
+       $medico->delete();
+       // dd($pacientes);,['pacientes'=> $pacientes,
+       // 'msg'=>"PACIENTE ELIMINADO"]
+       return redirect()->back()->with('error',"PACIENTE ELIMINADO");
     }
 }
