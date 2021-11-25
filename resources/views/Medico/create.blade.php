@@ -24,7 +24,13 @@
                         </div>
                       
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="nacionalidad" class="form-control" placeholder="nacionalidad">
+                          <!-- <input type="text" name="nacionalidad" class="form-control" placeholder="nacionalidad"> -->
+                           <select class="custom-select" id="inputGroupSelect02" name="nacionalidad">
+                                                <option selected>nacionalidad</option>
+                                                <option value="0">MEXICANA</option>
+                                                <option value="1">CANADIENSE</option>
+                                                <option value="2">AMERICANA</option>
+                                              </select>
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
                           <input type="text" name="nacimiento_lugar" class="form-control" placeholder="Lugar de Nacimiento ">
@@ -42,7 +48,13 @@
                           <input type="number" name="num_interior" class="form-control" placeholder="num_interior" >
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="sexo" class="form-control" placeholder="sexo">
+                          <!-- <input type="text" name="sexo" class="form-control" placeholder="Genero"> -->
+                            <select class="custom-select" id="inputGroupSelect01" name="sexo">
+                                                <option selected>GENERO</option>
+                                                <option value="0">Femenino</option>
+                                                <option value="1">Masculino</option>
+                                                <option value="2">Otro</option>
+                                              </select>
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
                           <input type="text" name="num_piso" class="form-control" placeholder="num_piso">
@@ -57,16 +69,34 @@
                           <input type="text" name="num_cedula" class="form-control" placeholder="Cedula">
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="tipoMedico" class="form-control" placeholder="tipoMedico">
+                          <!-- <input type="text" name="tipoMedico" class="form-control" placeholder="tipoMedico"> -->
+                            <select class="custom-select" id="inputGroupSelect03" name="tipoMedico">
+                                                <option selected>tipoMedico</option>
+                                                <option value="0">CARDIOLOGO</option>
+                                                <option value="1">OFTALMOLOGO</option>
+                                                <option value="2">DENTISTA</option>
+                                              </select>
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="giro" class="form-control" placeholder="giro">
+                          <!-- <input type="text" name="giro" class="form-control" placeholder="giro"> -->
+                                <select class="custom-select" id="inputGroupSelect04" name="giro">
+                                                <option selected>GIRO</option>
+                                                <option value="0">COMERCIAL</option>
+                                                <option value="1">PRIVADO</option>
+                                               <!--  <option value="2">DENTISTA</option> -->
+                                              </select>
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
                           <input type="text" name="slogan" class="form-control" placeholder="slogan">
                         </div>
                          <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
-                          <input type="text" name="medios_digitales" class="form-control" placeholder="medios_digitales">
+                          <!-- <input type="text" name="medios_digitales" class="form-control" placeholder="medios_digitales"> -->
+                             <select class="custom-select" id="inputGroupSelect04" name="medios_digitales">
+                                                <option selected>medios_digitales</option>
+                                                <option value="0">No</option>
+                                                <option value="1">Si</option>
+                                               <!--  <option value="2">DENTISTA</option> -->
+                                              </select>
                         </div>
                        <!--   <div class="col-xl-5 col-md-6 col-sm-12 p-2 m-3">
                           <input type="text" name="comentarios" class="form-control" placeholder="comentarios">
