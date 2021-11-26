@@ -15,7 +15,7 @@
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
-        s<link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+        <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,11 +38,20 @@
             }
      .full-height {
                 height: 100vh;
-            }
+                    }
+            .dark-theme {
+            color: black;
+            background-color: black;
+                    }
+                    body {
+                        color: black;
+                        background-color: white;
+                    }
 </style>
-<body>
+<body class="{{ $theme . '-theme' }}">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+          
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'CRM PROMOMEDICS') }} -->
@@ -149,6 +158,7 @@
                       @endauth
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                      
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -160,6 +170,13 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item dropdown">
+                                <div class="btn btn-dark">
+                                     <i id="theme-toggle" class="fas fa-{{$theme == 'light' ? 'sun' : 'moon' }}"></i>
+                                </div>
+                                  
+                                                          
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -177,6 +194,7 @@
                                     </form>
                                 </div>
                             </li>
+                        
                         @endguest
                     </ul>
                 </div>
@@ -189,3 +207,36 @@
     </div>
 </body>
 </html>
+<script>
+    var toggle_icon = document.getElementById('theme-toggle');
+var body = document.getElementsByTagName('body')[0];
+var sun_class = 'fas';
+var moon_class = 'fas';
+var dark_theme_class = 'dark-theme';
+console.log('Cambio de tema');
+toggle_icon.addEventListener('click', function() {
+    if (body.classList.contains(dark_theme_class)) {
+        toggle_icon.classList.remove(moon_class);
+        toggle_icon.classList.add(sun_class);
+
+        body.classList.remove(dark_theme_class);
+
+        setCookie('theme', 'light');
+    }
+    else {
+        toggle_icon.classList.remove(sun_class);
+        toggle_icon.classList.add(moon_class);
+
+        body.classList.add(dark_theme_class);
+
+        setCookie('theme', 'dark');
+    }
+});
+
+function setCookie(name, value) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+</script>
