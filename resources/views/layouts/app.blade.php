@@ -55,7 +55,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'CRM PROMOMEDICS') }} -->
-              <img src="{{ asset('img/logo.png') }}" alt="" class="h-25" style="width: 120px; ">
+              <img src="{{ asset('img/logo.png') }}" alt="" class="h-25" style="width: 120px; height: 30px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
