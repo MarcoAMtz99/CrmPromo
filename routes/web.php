@@ -23,6 +23,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('/medico','MedicoController');
 
 	//CREAR NUEVOS USUARIOS
-	Route::resource('users',UserController::class)->name('users');
+	Route::resource('users',UserController::class);
 	
 });
